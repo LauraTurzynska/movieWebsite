@@ -1,130 +1,53 @@
 * {
+  box-sizing: border-box;
   margin: 0;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar {
-  width: 100%;
-  height: 50px;
-  background-color: rgb(28, 26, 26);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+header {
+  background-color: #100f0f;
 }
-
-.navbar-container {
+header nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  height: 100%;
-  color: white;
-  font-family: "Sen", sans-serif;
+  padding: 20px;
+  height: 65px;
 }
-
-.logo-container {
-  flex: 1;
+header h1 {
+  margin-left: 35px;
 }
-
-.logo {
-  font-size: 30px;
-  color: #9565d4;
-}
-
-.menu-container {
-  flex: 6;
-}
-
-.menu-list {
-  display: flex;
+header ul {
+  margin-bottom: 10px;
+  margin-left: 550px;
   list-style: none;
 }
-
-.menu-list-item {
-  margin-right: 30px;
+header nav img {
+  height: 40px;
+  margin-right: 25px;
 }
-
-.menu-list-item.active {
-  font-weight: bold;
+header li {
+  display: inline-block;
+  font-size: 16px;
 }
-
-.profile-container {
-  flex: 2;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+header a {
+  text-decoration: none;
+  padding: 16px;
+  font-size: 20px;
+  color: #E6E6FA;
 }
-
-.profile-text-container {
-  margin: 0 20px;
-}
-
-.profile-picture {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.toggle {
-  width: 40px;
-  height: 20px;
-  background-color: white;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: relative;
-}
-
-.toggle-icon {
-  color: goldenrod;
-}
-
-.toggle-ball {
-  width: 18px;
-  height: 18px;
-  background-color: black;
-  position: absolute;
-  right: 1px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 1s ease all;
-}
-
-.toggle {
-  width: 40px;
-  height: 20px;
-  background-color: white;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: relative;
-}
-
-.toggle-icon {
-  color: goldenrod;
-}
-
-.toggle-ball {
-  width: 18px;
-  height: 18px;
-  background-color: black;
-  position: absolute;
-  right: 1px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 1s ease all;
+header h1 {
+  color: #CF9FFF;
+  font-size: 37px;
 }
 
 .sidebar {
   width: 50px;
   height: 100%;
-  background-color: black;
+  background-color: #100f0f;
   position: fixed;
   top: 0;
   display: flex;
@@ -134,13 +57,12 @@ body {
 }
 
 .left-menu-icon {
-  color: white;
+  color: #E6E6FA;
   font-size: 20px;
   margin-bottom: 40px;
 }
 
-.container {
-  background-color: #151515;
-  min-height: calc(100vh - 50px);
-  color: white;
+.banner img {
+  width: 90rem;
+  height: 40rem;
 }/*# sourceMappingURL=style.css.map */
