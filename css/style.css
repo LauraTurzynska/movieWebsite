@@ -5,6 +5,98 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #100f0f;
+  cursor: none;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  -webkit-animation: cursorAnim 0.5s infinite alternate;
+          animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -8px;
+  left: -8px;
+  -webkit-animation: cursorAnim2 0.5s infinite alternate;
+          animation: cursorAnim2 0.5s infinite alternate;
+}
+
+@-webkit-keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+@-webkit-keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@-webkit-keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.expand {
+  -webkit-animation: cursorAnim3 0.5s forwards;
+          animation: cursorAnim3 0.5s forwards;
+  border: 1px solid #bb0000;
 }
 
 header {
@@ -37,10 +129,10 @@ header a {
   text-decoration: none;
   padding: 16px;
   font-size: 20px;
-  color: #E6E6FA;
+  color: #FAF9F6;
 }
 header h1 {
-  color: #CF9FFF;
+  color: #bb0000;
   font-size: 37px;
 }
 
@@ -57,29 +149,29 @@ header h1 {
 }
 
 .left-menu-icon {
-  color: #E6E6FA;
+  color: #FAF9F6;
   font-size: 20px;
   margin-bottom: 40px;
 }
 
 .banner {
   background-color: #000000;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(../batman.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(../img/batman.jpeg);
   background-position: center;
   background-size: cover;
-  color: #ffffff;
+  color: #FAF9F6;
   padding: 1em;
   text-align: center;
   height: 500px;
 }
 
 .banner button {
-  background-color: white;
+  background-color: #FAF9F6;
   border-radius: 15px;
   height: 50px;
   width: 120px;
   font-size: 16px;
-  border: red 1px;
+  border: #bb0000 1px;
   float: left;
   margin-left: 70px;
   margin-top: 330px;
@@ -99,7 +191,7 @@ header h1 {
 .container {
   background-color: #151515;
   min-height: calc(100vh - 50px);
-  color: white;
+  color: #FAF9F6;
 }
 
 .content-container {
@@ -122,7 +214,7 @@ header h1 {
 }
 
 .featured-button {
-  background-color: #E6E6FA;
+  background-color: #FAF9F6;
   color: white;
   padding: 10px 20px;
   border-radius: 10px;
@@ -202,7 +294,7 @@ header h1 {
 
 .movie-list-item-button {
   padding: 10px;
-  background-color: #E6E6FA;
+  background-color: #FAF9F6;
   color: black;
   border-radius: 10px;
   outline: none;
@@ -226,5 +318,32 @@ header h1 {
 }
 
 .movie-list-title {
-  color: #E6E6FA;
+  color: #FAF9F6;
+}
+
+h2 {
+  color: #FAF9F6;
+  padding: 40px;
+  margin-left: 30px;
+}
+
+.genres {
+  background-color: #100f0f;
+  display: grid;
+  grid-template-columns: 450px 450px;
+  grid-template-rows: 180px 180px;
+  -moz-column-gap: 140px;
+       column-gap: 140px;
+  row-gap: 75px;
+  margin-left: 200px;
+  padding-top: 45px;
+}
+
+.genres img {
+  max-width: 100%;
+}
+
+.gen1 {
+  height: 335px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
