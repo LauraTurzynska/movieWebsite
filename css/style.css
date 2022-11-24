@@ -6,7 +6,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #100f0f;
-  cursor: none;
 }
 
 .cursor {
@@ -99,6 +98,10 @@ body {
   border: 1px solid #bb0000;
 }
 
+main {
+  padding-bottom: 150px;
+}
+
 header {
   background-color: #100f0f;
 }
@@ -131,9 +134,18 @@ header a {
   font-size: 20px;
   color: #FAF9F6;
 }
+header a:hover {
+  color: #bb0000;
+  transition: 0.2s;
+}
 header h1 {
   color: #bb0000;
   font-size: 37px;
+}
+
+.textan {
+  color: #FAF9F6;
+  margin-left: 55px;
 }
 
 .sidebar {
@@ -164,7 +176,6 @@ header h1 {
   text-align: center;
   height: 500px;
 }
-
 .banner button {
   background-color: #FAF9F6;
   border-radius: 15px;
@@ -176,7 +187,6 @@ header h1 {
   margin-left: 70px;
   margin-top: 330px;
 }
-
 .banner p {
   float: left;
   margin-left: -120px;
@@ -189,7 +199,7 @@ header h1 {
 }
 
 .container {
-  background-color: #151515;
+  background-color: #100f0f;
   min-height: calc(100vh - 50px);
   color: #FAF9F6;
 }
@@ -215,7 +225,7 @@ header h1 {
 
 .featured-button {
   background-color: #FAF9F6;
-  color: white;
+  color: #FAF9F6;
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
@@ -280,7 +290,7 @@ header h1 {
 }
 
 .movie-list-item-desc {
-  background-color: rgb(167, 165, 165);
+  background-color: rgb(167, 166, 166);
   opacity: 0.4;
   padding: 10px;
   font-size: 14px;
@@ -334,16 +344,158 @@ h2 {
   grid-template-rows: 180px 180px;
   -moz-column-gap: 140px;
        column-gap: 140px;
-  row-gap: 75px;
+  row-gap: 95px;
   margin-left: 200px;
   padding-top: 45px;
 }
 
 .genres img {
-  max-width: 100%;
+  width: 400px;
+  height: 240px;
+  border-radius: 20px;
 }
 
 .gen1 {
   height: 335px;
   width: 100%;
+}
+
+.gtitles {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 450px 450px;
+  grid-template-rows: 180px 180px;
+  -moz-column-gap: 140px;
+       column-gap: 140px;
+  row-gap: 95px;
+  margin-left: 200px;
+  padding-top: 45px;
+  color: #FAF9F6;
+}
+
+.gtitles p {
+  color: #FAF9F6;
+  font-size: 35px;
+  margin-left: -60px;
+  margin-top: 120px;
+  filter: drop-shadow(30px 10px 4px black);
+}
+.gtitles p:hover {
+  color: #bb0000;
+  transition: 0.2s;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background-color: #bb0000;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer p {
+  color: #FAF9F6;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  max-height: 100px;
+  background: url(../img/wave2.png);
+  background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  -webkit-animation: animateWave 4s linear infinite;
+          animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  -webkit-animation: animateWave_02 4s linear infinite;
+          animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 999;
+  opacity: 0.2;
+  bottom: 15px;
+  -webkit-animation: animateWave_02 3s linear infinite;
+          animation: animateWave_02 3s linear infinite;
+}
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  -webkit-animation: animateWave_02 3s linear infinite;
+          animation: animateWave_02 3s linear infinite;
+}
+@-webkit-keyframes animateWave {
+  0% {
+    background-position: 1000px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+@keyframes animateWave {
+  0% {
+    background-position: 1000px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+@-webkit-keyframes animateWave_02 {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 1000px;
+  }
+}
+@keyframes animateWave_02 {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 1000px;
+  }
+}
+footer a:hover {
+  transform: translateY(-10px);
+}
+
+.fmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 0px;
+  flex-wrap: wrap;
+}
+.fmenu li {
+  list-style-type: none;
+}
+.fmenu li a {
+  color: #FAF9F6;
+  font-size: 1.2em;
+  margin: 0px 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+}
+.fmenu li a:hover {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
